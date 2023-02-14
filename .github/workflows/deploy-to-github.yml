@@ -58,7 +58,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'adopt'
+          distribution: 'adopt-hotspot'
 
       - name: Deploy To Local
         run: cd plugin-source; mvn clean deploy -DCI_RELEASE_URL=${{ env.CI_LOCAL_URL }}
