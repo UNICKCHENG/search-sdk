@@ -1,0 +1,29 @@
+{
+  "name": "search-sdk",
+  "version": "0.0.1",
+  "description": "A plugin that supports Google, Bing, Brave search",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:ossrh": "mvn clean deploy -P release",
+    "deploy:github": "mvn clean deploy -P github -amd -pl response-handler-plus/response-handler-starter -DCI_RELEASE_URL=https://maven.pkg.github.com/UNICKCHENG/Response-Handler",
+    "version": "mvn versions:set-property -Dproperty=revision -DnewVersion=%npm_package_version%",
+    "tag": "git add pom.xml package.json CHANGELOG.md && git commit -m \"ci: v%npm_package_version%\" && git tag v%npm_package_version%",
+    "chagelog": "standard-changelog",
+    "no-deploy": "run-s version chagelog tag",
+    "deploy": "npm-run-all no-release --parallel release:ossrh release:github"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UNICKCHENG/search-sdk.git"
+  },
+  "author": "unickcheng",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/UNICKCHENG/search-sdk/issues"
+  },
+  "homepage": "https://github.com/UNICKCHENG/search-sdk#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "standard-changelog": "^2.0.27"
+  }
+}

@@ -1,0 +1,20 @@
+name: Pre-Release Publish
+
+on:
+  push:
+    paths:
+      - response-handler-*
+    branch:
+      - main
+    tags-ignore:
+      - v*
+  workflow_dispatch:
+
+jobs:
+
+  pre-deploy-to-github:
+    uses: ./.github/workflows/deploy-to-github.yml
+    with:
+      repository: "UNICKCHENG/maven-packages"
+    secrets:
+      access-token: ${{ secrets.ACTION_PAT }}
