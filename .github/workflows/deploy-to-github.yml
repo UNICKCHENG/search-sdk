@@ -57,7 +57,7 @@ jobs:
           path: plugin-source
       - uses: actions/setup-java@v3
         with:
-          java-version: '8'
+          java-version: '11'
           distribution: 'adopt'
 
       - name: Deploy To Local

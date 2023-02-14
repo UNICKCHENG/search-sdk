@@ -19,7 +19,7 @@
         <dependency>
             <groupId>io.github.unickcheng</groupId>
             <artifactId>search-sdk</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.github.unickcheng/response-handler-starter -->
         <dependency>

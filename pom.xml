@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
     <version>${revision}</version>
 
-    <name>response-handler</name>
+    <name>search-sdk</name>
     <url>https://github.com/UNICKCHENG/search-sdk</url>
     <description>A plugin that supports Google, Bing, Brave search</description>
 
