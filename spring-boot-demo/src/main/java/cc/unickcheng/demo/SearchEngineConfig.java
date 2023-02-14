@@ -29,8 +29,29 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SearchEngineConfig {
 
+    // 默认方式
     @Bean
     public SearchEngineService searchEngineService () {
         return new SearchEngineService();
     }
+
+    // 自定义代理方式
+//    @Bean
+//    public SearchEngineService searchEngineService () {
+//        return new SearchEngineService(new Proxy("http://127.0.0.1:9999"));
+//    }
+//
+    // 自定义初始化方式
+//    @Bean
+//    public SearchEngineService searchEngineService () {
+//        try {
+//            Playwright playwright = Playwright.create();
+//            Browser browser = playwright.chromium().launch(
+//                    new BrowserType.LaunchOptions()
+//            );
+//            return new SearchEngineService(playwright, browser);
+//        } catch (Exception e) {
+//            throw new RHandlerException("Failed initializing SearchEngineService");
+//        }
+//    }
 }
