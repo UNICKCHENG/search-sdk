@@ -24,6 +24,6 @@
   "homepage": "https://github.com/UNICKCHENG/search-sdk#readme",
   "devDependencies": {
     "npm-run-all": "^4.1.5",
-    "standard-changelog": "^3.0.0"
+    "standard-changelog": "^5.0.0"
   }
 }
